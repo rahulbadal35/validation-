@@ -1,0 +1,45 @@
+
+<html>
+
+    <head>
+                
+                <title>User Form</title>
+    </head>
+
+<body>
+    
+    
+        <button id="add-user" onclick="showAddUser()">New Login</button>
+        <button id="view-user" onclick="showUsers()">User Details</button>
+   
+
+    <h2 style="text-align: center; display: none;" id="user-added">User added successfully</h2>
+    <fieldset id="user-form">
+        <legend>Add User:</legend>
+        <form onsubmit="return false;" method="POST" id="myForm">
+            <label for="uname">Name:</label> <input type="text" name="name" id="uname"><br>
+            <label for="email">Email:</label> <input type="email" name="email" id="email"><br>
+            <label for="pwd">Password:</label> <input type="password" name="pwd"  id="pwd"><br>
+            <label for="cpwd">Confirm Password:</label> <input type="password" name="cpwd" id="cpwd"><br>
+            <input type="submit" id="submit" onclick="addUser();" value="ADD"  />
+            
+            <input type="hidden" id="uid" value="">
+        </form>
+
+    </fieldset>
+
+    <fieldset id="users" style="display: none;">
+        <legend>Add User:</legend>
+        <table id="users">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+        </table>
+    </fieldset>
+    <script src="abc.js"></script>
+</body>
+
+</html>
